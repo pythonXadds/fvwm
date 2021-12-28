@@ -1,0 +1,2 @@
+# fvwm
+My fvwm configs
