@@ -1,4 +1,13 @@
-##################################
+
+#######################
+#______   __  __   __ __   _____     
+#|  __  \  \ \/ /   |  \  /  |  | __ \    
+#|   ___/   \  /    | \ \/ / |  | | \ |   
+#|   |       / /     | |\__/| |  | |_/ |   
+#|__|    /_/       |_|  |_|  |____/    
+#
+#    BLUE     CONFIG
+######################
 #  ____________________________
 # (   _________________________)
 #  ) (__  _  _  _    _
@@ -7,9 +16,9 @@
 # (___)    \/    \/\/(_/\/\_) 2.6
 #
 #
-#  This is the default configuration file shipped with fvwm.
+#  
 #
-#  This config file is organized as follows:
+# This config file is organized as follows:
 #
 #    1: Functions
 #    2: Styles
@@ -20,7 +29,7 @@
 #    7: Modules
 #
 #################################
-
+#################################
 # InfoStoreAdd can be used to store variable data internal to fvwm.
 # The variable can then be used in the configuration as $[infostore.name].
 #
@@ -33,7 +42,7 @@ InfoStoreAdd terminal lxterminal
 
 InfoStoreAdd runcmd "dmenu_run"
 
-###########
+################################
 # 1: Functions
 #
 # Fvwm can use custom functions for various tasks.
@@ -46,7 +55,7 @@ InfoStoreAdd runcmd "dmenu_run"
 #   + D [Action to do on a Mouse Double Click]
 #   + H [Action to do on a Mouse Hold]
 #   + M [Action to do on a Mouse Motion]
-###########
+################################
 
 # Start Function
 #
@@ -255,31 +264,15 @@ Style FvwmIdent WindowListSkip
 #      14 - FvwmIconMan Iconified Button
 ###########
 ## [pythonXadds Blue theme] :)
-##########################################################################
-#Colorset 0  fg #ffffff, bg #000040, hi #FF9100, sh, Plain, NoShape
-#Colorset 1  fg #000000, bg #000040, hi #FFFF00, sh, Plain, NoShape
-#Colorset 2  fg #ffffff, bg #000040, hi #0000FF, sh, Plain, NoShape
-#Colorset 3  fg black, bg #0000FF, hi #0000FF, hi #0000FF, hi #0000FF sh ##0000FF, Hatch, NoShape
-#Colorset 4  fg #0F0BF5, bg ##0F0BF5, hi #0F0BF5, sh ##FFFF00, Plain, NoShape
-#Colorset 5  fg #000000, bg #ffffff, hi#1E90FF, sh, Plain, NoShape
-#Colorset 6  fg #ffffff, bg #2d2d2d, hi #FFFF00, sh, Plain, NoShape
-#Colorset 7  fg grey30, bg #ffffff, hi #2D00FF, sh, Plain, NoShape
-#Colorset 8  fg #ffffff, bg #000040, hi #0000FF, sh, Plain, NoShape
-
+#######################################################
 ########### Side bar #######################################################
 Colorset 10 fg #ffffff, bg #000040, hi ##FFFF00, sh #999999, Plain, NoShape
 Colorset 11 fg #ffffff, bg #000040, hi #ffffff, sh #ffffff, Plain, NoShape
 Colorset 12 fg #2d2d2d, bg #ffffff, hi, sh, Plain, NoShape
 Colorset 13 fg #ffffff, bg #000040, hi, sh, Plain, NoShape
 Colorset 14 fg #555555, bg #000040, hi #aaaaaa, sh #999999, Plain, NoShape
-###########################################################################
-
-
-############# CDE theme  ##################################################
-
-################################################################
-
-
+########################################################
+############# CDE theme ################################### ##################################################
 
 #   1 - Inactive Windows 
 #   2 - Active Window
@@ -289,6 +282,7 @@ Colorset 1 fg white, bg #FF0000
 Colorset 2 fg white, bg #1E90FF
 Colorset 3 fg white, bg #A52A2A
 Colorset 4 fg white, bg #0000FF
+
 # Window Button Locations [1 Title 42]
 Mouse 1 4 A Iconify
 Mouse 1 2 A Maximize
@@ -322,7 +316,7 @@ Style * Colorset 1, HilightColorset 2, \
 #################################################################################
 
 
-#######
+###########
 # 4: Menus
 ###########
 MenuStyle * MenuColorset 5, ActiveColorset 6, GreyedColorset 7, TitleColorset 8
@@ -714,6 +708,14 @@ DestroyModuleConfig EventNewDesk:*
 *FvwmFormDefault: Colorset 10
 *FvwmFormDefault: ItemColorset 13
 
+###########################################################
+# Xrandr screen instructions 
+
 exec xrandr --output LVDS1 --off --output VGA1 --primary --mode 1280x1024 --pos 0x0 --rotate normal --output VIRTUAL1 --off 
 
+############################################################
+##Comment out if not required##
+
 exec nitrogen --restore
+
+############################################################
